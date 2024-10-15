@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    background-color: black;
 }
 
 #root {
@@ -25,15 +26,16 @@ body {
     grid-template-columns: repeat(4, 100px);
     gap: 10px;
     justify-content: center;
+
 }
 
 .cardStyle {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    border: 1px solid #f5f2f2;
     cursor: pointer;
     position: relative;
-    background-color: #1a1717;
+    background-color: #552727;
 
 }
 
