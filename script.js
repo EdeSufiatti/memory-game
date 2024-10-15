@@ -1,8 +1,8 @@
 const container = document.getElementById("cards");
 
 const images = [
-    'url1.jpg', 'url2.jpg', 'url3.jpg', 'url4.jpg',
-    'url1.jpg', 'url2.jpg', 'url3.jpg', 'url4.jpg'
+    './assets/0.png', './assets/1.png', './assets/2.png', './assets/3.png',
+    './assets/4.png', './assets/5.png', './assets/6.png', './assets/7.png'
 ];
 
 for (let i = 0; i < 16; i++) {
@@ -12,7 +12,7 @@ for (let i = 0; i < 16; i++) {
 
     const img = document.createElement('img');
     img.src = images[i];
-    img.alt = 'Imagem do Jogo';
+
     img.style.width = '100%';
     img.style.height = 'auto';
 
