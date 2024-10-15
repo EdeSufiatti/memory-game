@@ -1,8 +1,8 @@
 const container = document.getElementById("cards");
 
 const images = [
-    './assets/0.png', './assets/1.png', './assets/2.png', './assets/3.png',
-    './assets/4.png', './assets/5.png', './assets/6.png', './assets/7.png'
+    './assets/cardeal.jpg', './assets/macaco.jpg', './assets/papagaio.jpg', './assets/arara.jpg',
+    './assets/capivaras.jpg', './assets/jaguar.jpg', './assets/gatoselva.jpg', './assets/tucano.jpg'
 ];
 
 const dupimage = images.concat(images)
