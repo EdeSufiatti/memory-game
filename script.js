@@ -1,7 +1,7 @@
 const container = document.getElementById("cards");
 const timerDisplay = document.getElementById("time");
 
-// Utilize exatamente 8 imagens diferentes
+
 const images = [
     './assets/cardeal.jpg',
     './assets/macaco.jpg',
@@ -13,8 +13,8 @@ const images = [
     './assets/tucano.jpg'
 ];
 
-// Duplicar as imagens para criar 16 cartas
-const dupimage = images.concat(images); // Agora temos exatamente 16 cartas
+
+const dupimage = images.concat(images);
 let firstCard, secondCard;
 let lockBoard = false;
 let matchedPairs = 0;
@@ -37,9 +37,17 @@ function startTimer() {
 }
 
 function checkEndGame() {
-    if (matchedPairs === images.length) { // 8 imagens = 8 pares
+    if (matchedPairs === images.length) {
         clearInterval(timer);
-        alert(`Parabéns! Você encontrou todos os pares em ${timeElapsed} segundos.`);
+        alert(`Parabéns! Você encontrou todos os pares em ${timeElapsed} segundos.`)
+        container.innerHTML = '';
+        firstCard = null;
+        secondCard = null;
+        lockBoard = false;
+        matchedPairs = 0;
+        timeElapsed = 0;
+
+        createCards();
     }
 }
 
@@ -49,7 +57,7 @@ function handleCardClick(event) {
     const clickedCard = event.currentTarget;
     if (clickedCard === firstCard) return;
 
-    clickedCard.classList.add('show'); // Mostra a imagem
+    clickedCard.classList.add('show');
 
     if (!firstCard) {
         firstCard = clickedCard;
@@ -98,3 +106,4 @@ function createCards() {
 }
 
 createCards();
+
