@@ -37,20 +37,13 @@ dd {
     color: white;
     text-align: center;
     font-size: 50px;
-<<<<<<< HEAD
     justify-content: center;
   
-=======
-    width: 100%;
-    justify-content: center;
-    padding: 150px;
->>>>>>> 73519364910a21cded65007579ddffc0a0266c10
 
 
 }
 
 .array {
-<<<<<<< HEAD
     margin-left: 513px;
     display: grid;
     grid-template-columns: repeat(4, 3fr);
@@ -60,15 +53,5 @@ dd {
   
     
   
-=======
-    margin-left: 300px;
-    display: grid;
-    grid-template-columns: repeat(4, 3fr);
-    gap: 10px;
-    color: white;
-    width: 45vw;
-    height: 500px;
-    justify-content: center;
->>>>>>> 73519364910a21cded65007579ddffc0a0266c10
 
 }

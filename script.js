@@ -7,7 +7,6 @@ const images = [
 
 const dupimage = images.concat(images)
 
-<<<<<<< HEAD
 
 function embaralhar(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -22,8 +21,6 @@ embaralhar(dupimage);
 
 
 
-=======
->>>>>>> 73519364910a21cded65007579ddffc0a0266c10
 for (let i = 0; i < 16; i++) {
     const card = document.createElement('button');
     card.className = 'cardStyle';
