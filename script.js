@@ -5,13 +5,15 @@ const images = [
     './assets/4.png', './assets/5.png', './assets/6.png', './assets/7.png'
 ];
 
+const dupimage = images.concat(images)
+
 for (let i = 0; i < 16; i++) {
     const card = document.createElement('button');
     card.className = 'cardStyle';
 
 
     const img = document.createElement('img');
-    img.src = images[i];
+    img.src = dupimage[i];
 
     img.style.width = '100%';
     img.style.height = 'auto';
