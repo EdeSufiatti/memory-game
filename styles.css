@@ -45,13 +45,13 @@ dd {
 }
 
 .array {
-    margin-left: 180px;
+    margin-left: 300px;
     display: grid;
     grid-template-columns: repeat(4, 3fr);
     gap: 10px;
     color: white;
-    width: 60vw;
-    height: 600px;
+    width: 45vw;
+    height: 500px;
     justify-content: center;
 
 }
