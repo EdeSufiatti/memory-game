@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: rgb(199, 196, 196);
+    background-color: rgb(140, 184, 131);
 }
 
 #root {
@@ -24,7 +24,7 @@ body {
 #cards {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
 
 }
@@ -35,7 +35,7 @@ body {
     border: 1px solid #f5f2f2;
     cursor: pointer;
     position: relative;
-    background-color: #552727;
+    background-color: #f8cf82;
 
 }
 
@@ -50,5 +50,16 @@ body {
 
 .cardStyle.show img {
     display: block;
+
+}
+
+#time {
+
+    color: white;
+    border-style: groove;
+    margin-left: 15px;
+    margin-right: 13px;
+
+
 
 }

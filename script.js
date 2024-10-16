@@ -38,50 +38,60 @@ function startTimer() {
 
 function checkEndGame() {
     if (matchedPairs === images.length) {
-        clearInterval(timer);
+        clearInterval(timer)
         alert(`Parabéns! Você encontrou todos os pares em ${timeElapsed} segundos.`)
-        container.innerHTML = '';
-        firstCard = null;
-        secondCard = null;
-        lockBoard = false;
-        matchedPairs = 0;
-        timeElapsed = 0;
+        container.innerHTML = ''
+        firstCard = null
+        secondCard = null
+        lockBoard = false
+        matchedPairs = 0
+        timeElapsed = 0
+        createCards()
+        timerStarted = false
 
-        createCards();
+
     }
 }
 
+let timerStarted = false
+
 function handleCardClick(event) {
-    if (lockBoard) return;
+    if (lockBoard) return
 
-    const clickedCard = event.currentTarget;
-    if (clickedCard === firstCard) return;
+    const clickedCard = event.currentTarget
+    if (clickedCard === firstCard) return
 
-    clickedCard.classList.add('show');
+
+    if (!timerStarted) {
+        startTimer();
+        timerStarted = true
+    }
+
+    clickedCard.classList.add('show')
 
     if (!firstCard) {
-        firstCard = clickedCard;
+        firstCard = clickedCard
         return;
     }
 
-    secondCard = clickedCard;
+    secondCard = clickedCard
 
-    lockBoard = true;
+    lockBoard = true
 
     setTimeout(() => {
-        const firstImage = firstCard.querySelector('img').src;
-        const secondImage = secondCard.querySelector('img').src;
+        const firstImage = firstCard.querySelector('img').src
+        const secondImage = secondCard.querySelector('img').src
 
         if (firstImage === secondImage) {
-            matchedPairs++;
-            checkEndGame();
-            resetBoard();
+            matchedPairs++
+            checkEndGame()
+            resetBoard()
         } else {
-            firstCard.classList.remove('show');
-            secondCard.classList.remove('show');
-            resetBoard();
+            firstCard.classList.remove('show')
+            secondCard.classList.remove('show')
+            resetBoard()
         }
-    }, 1000);
+    }, 1000)
 }
 
 function resetBoard() {
@@ -102,7 +112,7 @@ function createCards() {
         card.appendChild(img);
         container.appendChild(card);
     }
-    startTimer();
+
 }
 
 createCards();
